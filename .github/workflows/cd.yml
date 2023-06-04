@@ -29,4 +29,4 @@ jobs:
         run: sudo apt-get install -y sshpass
       - name: upload app
         run: |
-          sshpass -p 'Password123!' ssh -o StrictHostKeyChecking=no azureuser@20.185.67.127 "rm -r orientation-haproxy && git clone https://github.com/shaniblau/orientation-haproxy.git && cd orientation-haproxy && pip install -r requirements.txt"
+          sshpass -p 'Password123!' ssh -o StrictHostKeyChecking=no azureuser@20.185.67.127 "rm -r orientation-haproxy-server && git clone https://github.com/shaniblau/orientation-haproxy-server.git && cd orientation-haproxy-server && pip install -r requirements.txt"
