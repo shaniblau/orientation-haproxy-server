@@ -1,5 +1,4 @@
 import os
-from typing import List
 
 from fastapi import FastAPI, UploadFile
 
@@ -15,3 +14,4 @@ async def create_upload_file(file: UploadFile):
     with open(file_path, 'wb') as f:
         f.write(await file.read())
     return {"filename": name}
+
